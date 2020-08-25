@@ -6,4 +6,4 @@ heyyyyyyyyyyyy is a parody of [Hey](https://hey.com).
 
 The heyyyyyyyyyyyy.com website is made with [blocks.css](https://thesephist.github.io/blocks.css/).
 
-![Heyyyyyyyyyyyy.com screnshot](heyyyyyyyyyyyy.jpg)
+![Heyyyyyyyyyyyy.com screnshot](static/heyyyyyyyyyyyy.jpg)
