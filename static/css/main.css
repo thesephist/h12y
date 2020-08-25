@@ -78,6 +78,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 section h1 {
@@ -85,7 +86,7 @@ section h1 {
 }
 
 section h2 {
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 
 section p {
@@ -219,15 +220,47 @@ span.cursor {
     display: inline-block;
 }
 
+.testimonial {
+    margin: .75em 0;
+}
+
+.testimonial .quote {
+    font-style: italic;
+}
+
+.testimonial .quote::before,
+.testimonial .quote::after {
+    content: '"';
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.testimonial .quoted {
+    font-size: 1.1rem;
+    margin-top: -.5rem;
+}
+
+.testimonial .quoted::before {
+    content: '~';
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.testimonial .highlight {
+    background: linear-gradient(90deg, #5723ff36 0%, #0074e44f 100%);
+    padding: 2px .2em 1px .2em;
+}
+
 .pricing-box {
+    margin-top: 2em;
     display: flex;
     flex-direction: row;
 }
 
 .pricing-square {
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: bold;
-    padding: 1em .4em;
+    padding: 1.5em .4em;
     font-weight: normal;
     margin: 0 1rem;
 }
@@ -238,13 +271,45 @@ span.cursor {
 
 .pricing-explanation li {
     list-style: none;
-    font-size: 1.5em;
+    font-size: 1.7em;
     line-height: 1.5em;
+}
+
+.howitworks h2 {
+    color: var(--link-color);
+}
+
+footer {
+    background: var(--block-accent-color);
+    padding: 3em 0;
+}
+
+footer p,
+footer p a {
+    color: #fff;
+}
+
+footer p {
+    font-size: 1.4em;
+    line-height: 1.5em;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+footer p.sub {
+    font-style: italic;
+    opacity: .7;
 }
 
 @media only screen and (max-width: 800px) {
     section.hero,
     .pricing-box {
         flex-direction: column;
+        align-items: center;
+    }
+    .feature-pill {
+        font-size: 1.2em;
+        padding: .3em .6em;
     }
 }
