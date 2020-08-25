@@ -279,6 +279,10 @@ span.cursor {
     color: var(--link-color);
 }
 
+.hand-arrow {
+    height: 600px;
+}
+
 footer {
     background: var(--block-accent-color);
     padding: 3em 0;
@@ -297,7 +301,7 @@ footer p {
     margin: auto;
 }
 
-footer p.sub {
+footer span.sub {
     font-style: italic;
     opacity: .7;
 }
