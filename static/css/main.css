@@ -1,0 +1,250 @@
+html,
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: #fafafa;
+    --link-color: #5723ff;
+    --block-accent-color: linear-gradient(90deg, var(--link-color) 0%, #0074e4 100%);
+}
+
+body {
+    margin-top: 64px;
+}
+
+a {
+    cursor: pointer;
+}
+
+a,
+span.accent {
+    font-weight: bold;
+    color: var(--link-color);
+}
+
+header,
+.left,
+.right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    width: 100%;
+    padding: .4em .8em;
+    box-shadow: 0 2px 12px -2px rgba(0, 0, 0, .5);
+    border-bottom: 3px solid var(--block-text-color);
+    background: #fff;
+    height: 64px;
+}
+
+#hey {
+    width: 0;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    position: relative;
+}
+
+#hey::after {
+    content: '';
+    display: block;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+a.block {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+section {
+    margin: 4em auto;
+    width: 96%;
+    max-width: 924px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section h1 {
+    font-size: 3em;
+}
+
+section h2 {
+    font-size: 2.5em;
+}
+
+section p {
+    font-size: 1.4em;
+    max-width: 700px;
+    line-height: 1.5em;
+}
+
+section h1,
+section h2,
+section p {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+section.hero {
+    padding-top: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-left,
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-big {
+    font-size: 1.5em;
+    padding: .4em .6em;
+}
+
+.count {
+    color: #999;
+    font-style: italic;
+}
+
+ul.email-list {
+    margin: 1em;
+    padding-left: 0;
+    position: relative;
+    font-size: 1.4em;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+ul.email-list::before,
+ul.email-list::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40%;
+}
+
+ul.email-list::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(250, 250, 250, 1), rgba(250, 250, 250, 0));
+}
+
+ul.email-list::after {
+    background: linear-gradient(to top, rgba(250, 250, 250, 1), rgba(250, 250, 250, 0));
+    bottom: 0;
+}
+
+ul.email-list li {
+    font-weight: bold;
+    line-height: 1.5em;
+    list-style: none;
+    text-align: center;
+}
+
+ul.email-list li::after {
+    content: '@heyyyyyyyyyyyy.com';
+    color: var(--link-color);
+}
+
+.email-client {
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: normal;
+    width: 80%;
+    min-width: 300px;
+    position: relative;
+}
+
+.email-header .slot {
+    padding: .6em;
+    border-bottom: 3px solid var(--block-text-color);
+}
+
+.email-body {
+    padding: .6em;
+    height: 10em;
+}
+
+@keyframes flash {
+    from { opacity: 100% }
+    to { opacity: 0% }
+}
+
+span.cursor {
+    display: inline-block;
+    border-left: 3px solid var(--link-color);
+    animation: flash .6s ease-in-out alternate infinite;
+    margin: 0;
+    height: 1.4em;
+    margin-top: -0.5em;
+    transform: translate(0, .25em);
+}
+
+.full-send-btn {
+    position: absolute;
+    top: unset;
+    left: unset;
+    right: 12px;
+    bottom: 8px;
+    display: block;
+}
+
+.feature-pills {
+    overflow: hidden;
+    text-align: center;
+}
+
+.feature-pill {
+    font-size: 1.5em;
+    padding: .6em .8em;
+    display: inline-block;
+}
+
+.pricing-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.pricing-square {
+    font-size: 4em;
+    font-weight: bold;
+    padding: 1em .4em;
+    font-weight: normal;
+    margin: 0 1rem;
+}
+
+.pricing-explanation {
+    padding-left: 0;
+}
+
+.pricing-explanation li {
+    list-style: none;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+@media only screen and (max-width: 800px) {
+    section.hero,
+    .pricing-box {
+        flex-direction: column;
+    }
+}
