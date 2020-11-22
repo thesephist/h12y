@@ -218,6 +218,7 @@ span.cursor {
     font-size: 1.5em;
     padding: .6em .8em;
     display: inline-block;
+    cursor: default;
 }
 
 .testimonial {
